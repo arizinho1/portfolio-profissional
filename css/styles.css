@@ -20,12 +20,15 @@ body {
 
 .container{
     display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
     max-width: 100%;
 }
 .container .estatico{
     color: white;
-    font-size: 60px;
+    font-size: 3vw;
     font-weight: 400;
+    margin-left: 20px;
 }
 .container .dinamico{
     margin-left: 20px;
@@ -329,6 +332,71 @@ main{
     margin: 8px;
 }
 
+.projetos {
+    padding-top: 93px;
+}
+
+.projetos h2, .projetos a {
+    text-align: center;
+}
+
+.projetos h2 {
+    padding-bottom: 70px;
+}
+
+.github-link {
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 93px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.projetos a {
+    display: inline;
+}
+
+.pro {
+    background-color: #C4C4C4;
+    height: 195px;
+    width: 310px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: ease-in-out 0.3s;
+}
+
+.pro div p {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    color: #C4C4C4;
+}
+
+.pro:hover {
+    letter-spacing: 5px;
+}
+
+.pro div {
+    background-color: #00ABB3;
+    width: 768px;
+    text-align: center;
+    padding: 5% 0;
+    transform: rotate(-50deg);
+}
+
+.projetos-itens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 29.5px;
+    width: 100%;
+    justify-content: center;
+}
 @media screen and (max-width: 999px) {
     body{
         overflow-x: hidden;
@@ -353,7 +421,7 @@ main{
   .mobile-menu {
     display: block;
   }
-}
+
 
 .nav-list.active {
   transform: translateX(0);
@@ -436,7 +504,7 @@ main{
 
 .pro div {
     background-color: #00ABB3;
-    width: 1000px;
+    width: 768px;
     text-align: center;
     padding: 5% 0;
     transform: rotate(-50deg);
@@ -450,26 +518,209 @@ main{
     justify-content: center;
 }
 
-@media (max-width:1200px) {
-  .projetos{
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-  }
-
-  #projetos {
-      display: flex;
-      justify-content: center;
-  }
-
-  .projetos-itens {
-      flex-direction: column;
-  }
+    .container .estatico{
+    color: white;
+    font-size: 6vw;
+    font-weight: 400;
+    margin-right: 270px;
 
 }
-@media (max-width:950px) {
-    .pro {
-        max-width: 300px;
+}
+
+@media screen and (max-width: 768px) {
+
+    body{
+    overflow-x: hidden;
+}
+
+  .nav-list {
+    position: absolute;
+    top: 8vh;
+    right: 0;
+    width: 50vw;
+    height: 92vh;
+    background: #00ABB3;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in;
+  }
+
+  .nav-list li {
+    margin-left: 0;
+    opacity: 0;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+.nav-list.active {
+  transform: translateX(0);
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.mobile-menu.active .line1 {
+  transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+  opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+  transform: rotate(45deg) translate(-5px, -7px);
+}
+
+
+.projetos {
+    padding-top: 93px;
+}
+
+.projetos h2, .projetos a {
+    text-align: center;
+}
+
+.projetos h2 {
+    padding-bottom: 70px;
+}
+
+
+.github-link {
+    margin: 0 auto;
+    padding-top: 35px;
+    padding-bottom: 93px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 35px;
+}
+
+.projetos a {
+    display: inline;
+}
+
+.pro {
+    background-color: #C4C4C4;
+    height: 195px;
+    width: 310px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: ease-in-out 0.3s;
+}
+
+.pro div p {
+    font-family: 'Fira Sans', sans-serif;
+    font-size: 20px;
+    color: #C4C4C4;
+}
+
+.pro:hover {
+    letter-spacing: 5px;
+}
+
+.pro div {
+    background-color: #00ABB3;
+    width: 768px;
+    text-align: center;
+    padding: 5% 0;
+    transform: rotate(-50deg);
+}
+
+.projetos-itens {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 29.5px;
+    width: 100%;
+    justify-content: center;
+}
+
+    nav{
+            flex-direction: row;
+            justify-content: space-around;
     }
 
+    nav ul{
+            flex-direction: row;
+            width: 70%;
+    }
+
+    header{
+            height: 600px;
+            height: 6vh;
+            justify-content: center;
+    }
+
+    .container .estatico{
+    color: white;
+    font-size: 6vw;
+    font-weight: 450;
+    margin-right: 370px;
 }
+
+    .container .dinamico{
+    font-size: 6vw;
+    font-weight: 400;
+    }
+
+.pacman-top{
+  margin-left: 100px;
+}
+
+.pacman-bottom{
+  margin-left: 100px;
+}
+
+.profile{
+    font-size: 2000vw;
+
+
+}
+}
+
+@media screen and (max-width: 450px){
+
+    .container .estatico{
+    color: white;
+    font-size: 6vw;
+    font-weight: 450;
+    margin-left: 150px;
+}
+
+    .container .dinamico{
+    font-size: 2vw;
+    font-weight: 400;
+    margin-left: 200px;
+    }
+
+.pacman-top{
+  margin-left: 230px;
+}
+
+.pacman-bottom{
+  margin-left: 230px;
+}
+
+
+}
+
+
+
+
+
