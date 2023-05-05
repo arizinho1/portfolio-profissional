@@ -23,6 +23,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     max-width: 100%;
+
 }
 .container .estatico{
     color: white;
@@ -36,6 +37,7 @@ body {
     height: 90px;
     overflow: hidden;
 }
+
 .dinamico li{
     color: #fc6d6d;
     list-style: none;
@@ -247,9 +249,8 @@ animation: eat 1s linear 0s infinite;
 .profile{
     margin-top: 350px;
     margin-bottom: 200px;
-    margin-left: 300px;
-    margin-right: 300px;
-
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 .bottom-container{
@@ -263,8 +264,8 @@ animation: eat 1s linear 0s infinite;
 .skills{
     margin-top: 300px;
     margin-bottom: 100px;
-    margin-left: 300px;
-    margin-right: 300px;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 .container{
@@ -326,8 +327,8 @@ main{
 }
 
 .mobile-menu div{
-    width: 32px;
     height: 2px;
+    width: 32px;
     background: white;
     margin: 8px;
 }
@@ -397,7 +398,9 @@ main{
     width: 100%;
     justify-content: center;
 }
-@media screen and (max-width: 999px) {
+
+
+@media screen and (max-width: 1024px) {
     body{
         overflow-x: hidden;
 }
@@ -414,6 +417,7 @@ main{
     transform: translateX(100%);
     transition: transform 0.3s ease-in;
   }
+
   .nav-list li {
     margin-left: 0;
     opacity: 0;
@@ -450,7 +454,6 @@ main{
   transform: rotate(45deg) translate(-5px, -7px);
 }
 
-
 .projetos {
     padding-top: 93px;
 }
@@ -479,18 +482,7 @@ main{
     display: inline;
 }
 
-.pro {
-    background-color: #C4C4C4;
-    height: 195px;
-    width: 310px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    overflow: hidden;
-    transition: ease-in-out 0.3s;
-}
+
 
 .pro div p {
     font-family: 'Fira Sans', sans-serif;
@@ -523,204 +515,84 @@ main{
     font-size: 6vw;
     font-weight: 400;
     margin-right: 270px;
-
 }
+
+.profile h1, .profile h2{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-itens: center;
+}
+
+.container .dinamico{
+    margin-right: 10px;
+    overflow: hidden;
+}
+
 }
 
 @media screen and (max-width: 768px) {
 
-    body{
-    overflow-x: hidden;
-}
-
-  .nav-list {
-    position: absolute;
-    top: 8vh;
-    right: 0;
-    width: 50vw;
-    height: 92vh;
-    background: #00ABB3;
-    flex-direction: column;
-    align-items: center;
+    .profile h1, .profile h2{
+    display: flex;
     justify-content: space-around;
-    transform: translateX(100%);
-    transition: transform 0.3s ease-in;
-  }
+    text-align: center;
+    align-itens: center;
+}
 
-  .nav-list li {
+    .skill-row{
+    margin-bottom: 100px;
     margin-left: 0;
-    opacity: 0;
-  }
-
-  .mobile-menu {
-    display: block;
-  }
-
-.nav-list.active {
-  transform: translateX(0);
-}
-
-@keyframes navLinkFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.mobile-menu.active .line1 {
-  transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-  opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-  transform: rotate(45deg) translate(-5px, -7px);
-}
-
-
-.projetos {
-    padding-top: 93px;
-}
-
-.projetos h2, .projetos a {
+    margin-right: 0;
+    display: flex;
     text-align: center;
+    justify-content: space-around;
+    align-itens: center;
 }
-
-.projetos h2 {
-    padding-bottom: 70px;
-}
-
-
-.github-link {
-    margin: 0 auto;
-    padding-top: 35px;
-    padding-bottom: 93px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
-    gap: 35px;
-}
-
-.projetos a {
-    display: inline;
-}
-
-.pro {
-    background-color: #C4C4C4;
-    height: 195px;
-    width: 310px;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    overflow: hidden;
-    transition: ease-in-out 0.3s;
-}
-
-.pro div p {
-    font-family: 'Fira Sans', sans-serif;
-    font-size: 20px;
-    color: #C4C4C4;
-}
-
-.pro:hover {
-    letter-spacing: 5px;
-}
-
-.pro div {
-    background-color: #00ABB3;
-    width: 768px;
-    text-align: center;
-    padding: 5% 0;
-    transform: rotate(-50deg);
-}
-
-.projetos-itens {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 29.5px;
-    width: 100%;
-    justify-content: center;
-}
-
-    nav{
-            flex-direction: row;
-            justify-content: space-around;
-    }
-
-    nav ul{
-            flex-direction: row;
-            width: 70%;
-    }
-
-    header{
-            height: 600px;
-            height: 6vh;
-            justify-content: center;
-    }
 
     .container .estatico{
-    color: white;
-    font-size: 6vw;
-    font-weight: 450;
-    margin-right: 370px;
-}
-
-    .container .dinamico{
-    font-size: 6vw;
-    font-weight: 400;
-    }
-
-.pacman-top{
-  margin-left: 100px;
-}
-
-.pacman-bottom{
-  margin-left: 100px;
-}
-
-.profile{
-    font-size: 2000vw;
-
-
+    margin-right: 375px;
 }
 }
 
-@media screen and (max-width: 450px){
+
+@media screen and (max-width: 450px) {
+
+    .profile h1, .profile h2{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-itens: center;
+}
+
+    .skill-row h2{
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    align-itens: center;
+}
 
     .container .estatico{
-    color: white;
-    font-size: 6vw;
-    font-weight: 450;
-    margin-left: 150px;
+    margin-right: 250px;
 }
 
-    .container .dinamico{
-    font-size: 2vw;
-    font-weight: 400;
-    margin-left: 200px;
-    }
-
-.pacman-top{
-  margin-left: 230px;
+    .dinamico li span::after{
+    content: "";
+    position: absolute;
+    widht: 10%;
+    height: 100%;
+    left: 0;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 1.5s steps(10) infinite;
+    background-color: #000000;
 }
 
-.pacman-bottom{
-  margin-left: 230px;
+    .dinamico li{
+    color: #fc6d6d;
+    list-style: none;
+    font-size: 60px;
+    font-weight: 100%;
+    position: relative;
+    animation: slide 6s steps(4) infinite;
 }
-
-
 }
-
-
-
-
-
